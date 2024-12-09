@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Settings</h1>
+<div class="theme-toggle">
+    <label for="theme">Select Theme:</label>
+    <select id="theme" onchange="changeTheme(this.value)">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+    </select>
+</div>
+{% endblock %}

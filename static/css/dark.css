@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav .nav-right {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+nav .nav-right a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav .nav-right a:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    width: 300px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+}
+
+#generated-image {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link id="theme-stylesheet" rel="stylesheet" href="{{ url_for('static', filename='css/dark.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="brand">Creatify</div>
+        <div class="nav-right">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('settings') }}">Settings</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+        </div>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const theme = localStorage.getItem('theme') || 'dark';
+            setTheme(theme);
+        });
+
+        function setTheme(theme) {
+            const themeStylesheet = document.getElementById('theme-stylesheet');
+            if (theme === 'light') {
+                themeStylesheet.href = "{{ url_for('static', filename='css/light.css') }}";
+            } else {
+                themeStylesheet.href = "{{ url_for('static', filename='css/dark.css') }}";
+            }
+            localStorage.setItem('theme', theme);
+        }
+    </script>
+</body>
+</html>
